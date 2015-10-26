@@ -1,0 +1,325 @@
+@font-face {
+  font-family: 'Architects Daughter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Architects Daughter'), local('ArchitectsDaughter'), url(http://fonts.gstatic.com/s/architectsdaughter/v6/RXTgOOQ9AAtaVOHxx0IUBM3t7GjCYufj5TXV5VnA2p8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+html{
+	font-family: TW Cen MT, Trebuchet, Verdana, sans-serif;
+    background-color: #303030;
+   /* background-color: #3F2860;
+  /*background-color: rgb(177, 164, 144);
+	background-color: rgb(235, 136, 3);
+	background-color: rgb(214, 236, 255);/*
+	background-color: rgb(254,212,107);*/
+}
+body{
+	margin-top: 0px;
+}
+.fud{
+	color: navy;
+	background-color: goldenrod;
+	border: 4px solid navy;
+	border-radius: 4px;
+	font-weight: bold;
+}
+/*navbar embeded*/
+#navemb{
+	position: fixed;
+	left: 10%;
+	top: 0px;
+	z-index: 6;
+	width: 80%;
+	height: 3em;
+}
+/*Changed hover height so that picture are still clickable*/
+#navemb:hover{
+	height: 38%;
+}
+/*navbar.html*/
+#nav{
+	background-color: transparent;
+}
+#navbar{
+	background-color: rgb(78,91,111);
+	line-height: 1.5em;
+	text-align: center;
+	font-family: TW Cen MT, Trebuchet, Verdana, sans-serif;
+	min-height: 1.5em;
+	border-radius: 0px 0px 8px 8px;
+	padding: 0px 2% 0px 2%;
+	width: 96%;
+}
+#navdat{
+	display: inline;
+	list-style: none;
+	font-family: TW Cen MT, Trebuchet, Verdana, sans-serif;
+	width: 100%;
+	padding: 0px;
+}
+#_1{
+	background-color: #B8B8B8;
+	color: black;
+}
+#_2{
+	background-color: #A0A0A0;
+	color: black;
+}
+#_3{
+	background-color: #909090;
+	color: black;
+}
+#_4{
+	background-color: #808080;
+	color: black;
+}
+#_5{
+	background-color: #707070 ;
+	color: black;
+}
+#_6{
+	background-color: #606060 ;
+	color: black;
+}
+#navdat a{
+	color: inherit;
+	text-decoration: inherit;
+}
+#navdat li{
+	float: left;
+	width: calc(100% / 6);
+	font-size: 1.2em;
+	line-height: 1.5em;
+	height: 1.5em;
+	position: relative;
+	font-variant: small-caps;
+}
+#navdat li:hover{
+	background-color: rgb(214, 236, 255);
+	color: black;
+	transition: background-color .5s ease-in-out, color .5s ease-in-out;
+	overflow: visible;
+}
+#navdrop{
+	position: absolute;
+	top: 1.5em;
+	padding: 0px;
+	width: 100%;
+	color: white;
+}
+#navdrop li{
+	background-color: rgb(78, 91, 111);
+	float: none;
+	width: 100%;
+	font-variant: normal;
+	font-size: 0em;
+	visibility: hidden;
+	height: 0em;
+	list-style: none;
+	color: transparent;
+}
+#navdat li:hover #navdrop li{
+	visibility: visible;
+	height: 1.5em;
+	font-size: calc(1em / 1.2);
+	color: inherit;
+	transition: height .5s ease-in-out, font-size .5s ease-in-out, color .5s ease-in-out, background-color .5s ease-in-out;
+}
+#navdat li #navdrop li:hover{
+	background-color: rgb(214, 236, 255);
+	color: black;
+}
+/*Home Page (home.html)*/
+#home img{
+	float: left;
+}
+#home .size1{
+	width: 25%;
+}
+#home .size2{
+	width: 20%;
+	float: right;
+}
+#home .size3{
+	width: 15%;
+}
+#home .size4{
+	width: 10%;
+}
+/*Recipe Pages*/
+#title{
+	line-height: 2em;
+  font-family: TW Cen MT, Trebuchet, Verdana, sans-serif;
+  font-size: 2em;
+  height: 3em;
+  background: radial-gradient(farthest-side at 20% 75%, rgb(178,227,137), rgb(214,236,255));
+  margin: 1.6em 0px 0px 0px;
+  padding: 5px;
+  position: relative;
+}
+/*Category Colours*/
+.home #title{
+	background: #303030;
+  border-radius: 7px;
+}
+.about #title{
+	background: #3F2860;
+  border-radius: 7px;
+}
+.appetisers #title{
+	background: #3F2860;
+  border-radius: 7px;
+}
+.main-courses #title{
+	background: #3F2860;
+  border-radius: 7px;
+}
+.desserts #title{
+	background: #3F2860;
+  border-radius: 7px;
+}
+.snacks-and-drinks #title{
+	background: #3F2860;
+  border-radius: 7px;
+}
+#webname{
+	float: right;
+	color: inherit;
+	text-decoration: inherit;
+  /*color: #7A9A95;*/
+  color: #90C5A9;
+}
+#rcpttl{
+	position: absolute;
+	bottom: 0px;
+  color: #505050;
+    left: 24%;
+    top: 100%;
+  font-size: 150px;
+  font-family: "NewCicleFina", Josefin Sans Std Light, Arial, Helvetica, sans-serif
+}
+#rcpttlabout{
+  position: absolute;
+  bottom: 0px;
+  color: rgb(234, 21, 122);
+  font-size: 50px;
+  font-family: 'Architects Daughter', cursive;
+}
+#rcpttlapp{
+  color: rgb(254,212,107);
+  position: absolute;
+  bottom: 0px;
+  font-size: 50px;
+  font-family: 'Architects Daughter', cursive;
+}
+#rcpttlmain{
+  color: rgb(80,217,255);
+  position: absolute;
+  bottom: 0px;
+  font-size: 50px;
+  font-family: 'Architects Daughter', cursive;
+}
+#rcpttldes{
+  color: rgb(171,184,221);
+  position: absolute;
+  bottom: 0px;
+  font-size: 50px;
+  font-family: 'Architects Daughter', cursive;
+}
+#rcpttlsnack{
+  color: rgb(95,231,213);
+  position: absolute;
+  bottom: 0px;
+  font-size: 50px;
+  font-family: 'Architects Daughter', cursive;
+}
+#home, #recipe{
+	background-color: rgb(78,91,111);
+	padding: 0px 5px 5px 0px;
+	margin: 5px 0px 0px 0px;
+  border-radius: 7px;
+}
+#picturebox, #ingredients, #method{
+	background-color: rgb(214,236,255);
+	border-radius: 3px;
+	padding: 5px;
+	margin: 5px 0px 0px 5px;
+	position: relative;
+}
+#picturebox{
+	min-height: calc(100% - 15px);
+	width: calc(30% - 15px);
+	float: left;
+  position: relative;
+}
+#picturebox img{
+  width: 100%;
+  border: transparent;
+	border-radius: 3px;
+	box-shadow: 2px 4px 2px rgb(242,114,175);
+  transition: width 0.5s ease-in-out, box-shadow 0.5s ease-in-out, position 0.5s ease-in-out;
+}
+#picturebox1{
+  min-height: calc(100% - 15px);
+  width: calc(30% - 15px);
+  float: left;
+  position: relative;
+}
+#picturebox1 img{
+  width: 100%;
+  border: transparent;
+  border-radius: 3px;
+  box-shadow: 2px 4px 2px rgb(242,114,175);
+  transition: width 0.5s ease-in-out, box-shadow 0.5s ease-in-out, position 0.5s ease-in-out;
+}
+.appetisers #picturebox img{
+	box-shadow: 2px 4px 2px rgb(254,212,107);
+}
+.main-courses #picturebox img{
+	box-shadow: 2px 4px 2px rgb(80,217,255);
+}
+.desserts #picturebox img{
+	box-shadow: 2px 4px 2px rgb(171,184,221);
+}
+.snacks-and-drinks #picturebox img{
+	box-shadow: 2px 4px 2px rgb(95,231,213);
+}
+.snacks-and-drinks #picturebox1 img{
+  box-shadow: 2px 4px 2px rgb(95,231,213);
+}
+#picturebox img:hover{
+  width: 120%;
+  z-index: 10;
+  position: absolute;
+  box-shadow: none;
+  box-shadow: 0px 0px 0px 2000px rgba(0,0,0,0.7);
+}
+#picturebox1 img:hover{
+  width: 101%;
+  z-index: 10;
+  position: absolute;
+  box-shadow: none;
+  box-shadow: 0px 0px 0px 2000px rgba(0,0,0,0.7);
+}
+#ingredients, #method{
+	width: calc(70% - 15px);
+	min-height: calc(50% - 15px);
+	float: right;
+}
+#ingredients h2, #method h2{
+	color: rgb(78,91,111);
+	font-family: TW Cen MT, Trebuchet, Verdana, sans-serif;
+}
+#ingredients h3, #method h3{
+	color: rgb(78,91,111);
+	font-family: TW Cen MT, Trebuchet, Verdana, sans-serif;
+}
+#ingredients ul{
+	-webkit-column-count: 2;
+	column-count: 2;
+	list-style-position: inside;
+}
+.clear-fix{
+	clear: both;
+}
