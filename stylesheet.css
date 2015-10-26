@@ -193,9 +193,9 @@ body{
 #rcpttl{
 	position: absolute;
 	bottom: 0px;
-  color: #505050;
+  color: #C0C0C0;
     left: 24%;
-    top: 100%;
+    top: 80%;
   font-size: 150px;
   font-family: "NewCicleFina", Josefin Sans Std Light, Arial, Helvetica, sans-serif
 }
