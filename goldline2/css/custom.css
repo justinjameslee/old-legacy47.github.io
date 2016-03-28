@@ -7,6 +7,23 @@
     color: black
 }
 
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  color: white;
+  text-decoration: none;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -26,12 +43,6 @@
     min-height: 500px;
 }
 
-.carousel-inner > .item > img {
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 500px;
-}
 .carousel-caption {
   position: absolute;
   right: 47%;
