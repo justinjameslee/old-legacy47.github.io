@@ -32,15 +32,8 @@
   width: 90%;
 }
 
-.carousel {
-    min-height: 500px;
-}
 .carousel-control {
     width: 10%
-}
-
-.carousel .item {
-    min-height: 500px;
 }
 
 .carousel-caption {
