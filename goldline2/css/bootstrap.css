@@ -5839,7 +5839,7 @@ button.list-group-item-danger.active:focus {
 }
 .well-sm {
   padding: 9px;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 .close {
   float: right;
