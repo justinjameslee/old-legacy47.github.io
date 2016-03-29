@@ -3312,7 +3312,8 @@ i.large {
 }
 
 a {
-  color: #039be5;
+  color: #ff9100;
+  /**color: #039be5;*/
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -3335,6 +3336,7 @@ a {
 a:active,
 a:hover {
   outline: 0;
+  color: #ff9100;
 }
 
 .collection {
