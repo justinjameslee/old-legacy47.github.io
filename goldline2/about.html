@@ -39,8 +39,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" class="glyphicon glyphicon-home"><span class="sr-only">(current)</span></a></li>
-            <li class="active"><a href="#">About</a></li>
+            <li><a href="index.html" class="glyphicon glyphicon-home"><span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="about.html">About</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Products</a></li>
             <li class="dropdown">
@@ -57,26 +57,69 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+    <div class="container">
     <div class="row">
-      <div class="col s9">
         <div class="panel panel-default">
-            <div class="panel-heading">
-            <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-                Panel content
-            </div>
-        </div>
-      </div>
-        <div class="col s3">
-            <ul class="collection with-header">
-            <li class="collection-header"><h4>Navigation Panel</h4></li>
-            <a href="#!" class="collection-item">Alvin</a>
-            <a href="#!" class="collection-item active">Alvin</a>
-            <a href="#!" class="collection-item">Alvin</a>
-            <a href="#!" class="collection-item">Alvin</a>
-          </ul>
+          <div class="panel-heading">
+             <img src="images/logo2.png">
           </div>
+          <div class="panel-body">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Why Choose Goldline IT?</a></li>
+              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Our Clients</a></li>
+              <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Our Partners</a></li>
+            </ul>
+            <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active flow-text" id="home">
+                <br>We, at Goldline IT, have been servicing businesses for more than 15 years. We are service professionals who treat your business as if it were our own and provide you with dedicated network and IT solutions.<br><br>We are experts in the medical and professional service fields and have created complex and integrated systems for these specialised industries. With software such as Best Practice, Medical Director, Pracsoft, Frontdesk and more, we can provide the support your business needs.<br><br>We also have experience with clients in retail, financial planning, accountancy, clothing importers, manufacturing, engineering, real estate, shipping and government. No matter what industry you are in, whether your business is small or large, we are your total IT provider.<br><br>Our goal is to provide total end-to-end IT solutions. We come to your workplace and audit your network, either by working with your current system or implementing an entire network. We have experienced and knowledgeable staff and partners to ensure we provide you with the best service as well as software/hardware and related products. Whatever your system needs, we will be able to source the right IT provider to give you the network support you need.<br><br>We are available for ongoing support at all times through our dedicated service channels. <a href="#">Contact us</a> and discuss how we can work with you to provide the most efficient network system for you.
+            </div>
+            <div role="tabpanel" class="tab-pane fade flow-text" id="profile">
+                <br>At Goldline IT, our clients’ system issues are our priority. We address your network needs in the same way we would our own and give you the attention you deserve. With extensive experience in the medical industry and professional services, our systems and operations are advanced enough to handle any industry-specific software, and we understand the need for rapid resolution of problems.<br><br>We provide you with IT solutions to enable a smooth and efficient network. Clients can enjoy peace of mind with secure software/hardware and ongoing network support and service.<br><br>Testimonials from any of our satisfied customers are available on request.
+            </div>
+            <div role="tabpanel" class="tab-pane fade flow-text" id="messages">
+                <div class="media">
+                    <div class="media-heading">
+                        <br>Our partners allow us to provide you with a total network solution. Partnering with HP, IBM, Microsoft, HCN, Mailguard, DataVault and StorageCraft, we can provide quality IT solutions and backup support by finding the product or service to suit your needs. Learn more about our partners and how together we can help you.<br><br><br>
+                    </div>
+                    <div class="container">
+                    <div class="row">
+                        <div class="col s12 m6 l3">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="media-object materialboxed" src="images/Intel.png" height="210">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col s12 m6 l3">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="media-object materialboxed" src="images/microsoft.png" height="210">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col s12 m6 l3">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="media-object materialboxed" src="images/hp.png" height="210">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col s12 m6 l3">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="media-object materialboxed" src="images/cisco.png" height="210">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
     </div>
     <footer class="page-footer" style="background-color: #e0e0e0">
           <div class="container">
@@ -104,6 +147,11 @@
     </body>
     <script type="text/javascript"> 
          $('.carousel').carousel()
+         
+         $('#myTabs a').click(function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+         })
     </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
