@@ -8,12 +8,12 @@ Access to this website can be done through legacy47.github.io/goldline or legacy
 This website is currently a major project that i'm am undergoing. 
 As such it is obviously a WIP.
 
-#Work in Progress:
+#Work in Progress
 * About Page (80%)
 * Contacts Page (0%)
 * Services Page (0%)
 * Products Page (0%)
 * Other minor pages (0%)
 
-#Completed:
+#Completed
 * Home Page (DONE) ~Bugs may be present
