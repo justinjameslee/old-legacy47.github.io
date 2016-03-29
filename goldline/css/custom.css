@@ -3587,3 +3587,13 @@ ul li {
     font-size: 1.2rem;
   }
 }
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
