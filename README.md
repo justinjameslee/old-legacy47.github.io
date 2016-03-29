@@ -1,3 +1,19 @@
 Legacy47.github.io
 ====
 Access to this website can be done through legacy47.github.io or legacy47.tk which is my own personal domain name
+
+Legacy47.github.io/goldline
+====
+Access to this website can be done through legacy47.github.io/goldline or legacy47.tk/goldline.
+This website is currently a major project that i'm am undergoing. 
+As such it is obviously a WIP.
+
+TO DO LIST:
+-About Page (80%)
+-Contacts Page (0%)
+-Services Page (0%)
+-Products Page (0%)
+-Other minor pages (0%)
+
+CHECK LIST:
+-Home Page (DONE) ~Bugs may be present
