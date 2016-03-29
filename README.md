@@ -9,11 +9,11 @@ This website is currently a major project that i'm am undergoing.
 As such it is obviously a WIP.
 
 #Work in Progress
-* About Page (80%)
 * Contacts Page (0%)
 * Services Page (0%)
-* Products Page (0%)
 * Other minor pages (0%)
 
 #Completed
 * Home Page (DONE) ~Bugs may be present
+* About Page (DONE) ~Bugs may be present
+* Products Page (DONE) ~Bugs may be present
