@@ -17,8 +17,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!--Custom CSS-->
     <link href="css/custom.css" rel="stylesheet">
-    <!--Custom Slider-->
-    <link rel="stylesheet" href="css/swiper.min.css">
       
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,14 +36,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="contact"><img alt="Brand" src="images/logo2.png"></a>
+          <a href="index.html" class="contact"><img alt="Brand" src="images/logo2.png"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#" class="glyphicon glyphicon-home"><span class="sr-only">(current)</span></a></li>
-            <li><a href="#">About Goldline IT</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Contact</a></li>
             <li><a href="#">Products</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services<span class="caret"></span></a>
@@ -150,7 +148,7 @@
                     <div class="card-content black-text">
                     <span class="card-title">Why Choose Us?</span>
                     <br>
-                    <img class="responsive-img" src="images/contact.png" style="height:117px">
+                    <img class="responsive-img" src="images/contact2.png" style="height:117px">
                     <p>
                         <li>18 Years of Experience.</li>
                         <li>Ongoing support and services.</li>
@@ -172,7 +170,7 @@
                 <img src="images/logo2.png">
                 </div>
                 <div class="col s12 m4 l4">
-                  <li><a class="black-text text-lighten-3" href="#!">About Goldline IT</a></li>
+                  <li><a class="black-text text-lighten-3" href="about.html">About Goldline IT</a></li>
                   <li><a class="black-text text-lighten-3" href="#!">Contact</a></li>
                   <li><a class="black-text text-lighten-3" href="#!">Remote Support</a></li>
                 </div>
@@ -188,44 +186,8 @@
             </div>
           </div>
         </footer>
-     <!-- Swiper JS -->
-    <script src="js/swiper.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        slidesPerView: 1,
-        paginationClickable: true,
-        spaceBetween: 30,
-        loop: true
-    });
-    </script>
     </body>
     <script type="text/javascript"> 
-        $(document).ready(function(){
-          $('.owl-carousel').owlCarousel();
-        });
-        
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
-        })
-        
          $('.carousel').carousel()
     </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
