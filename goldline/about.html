@@ -92,19 +92,27 @@
                 <img src="images/Intel.png" height="50">
                 <img src="images/hp.png" height="50">
                 <img src="images/pracsoft.jpg" height="50">
-                <img src="images/zedmed.png" height="50">
+                <img src="images/BestP.jpg" height="50">
                 <img src="images/logo-trend-micro.gif" height="50" width="60">
                 <img src="images/microsoft.png" height="50">
                 <img src="images/symantec.png" height="50">
+                <img src="images/HyperV.png" height="50">
+                <img src='images/hcn.jpg' height="100"
             </div>
             </div>
             </div>
             </div>
           </div>
         </div>
+        <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img src="images/mailguard.png"></a>
+                    <a class="carousel-item" href="#two!"><img src="images/IBM.jpg"></a>
+                    <a class="carousel-item" href="#three!"><img src="images/cisco.png"></a>
+        </div>
         </div>
     </div>
     </main>
+    
     <footer class="page-footer grey lighten-3">
           <div class="container">
             <div class="row">
@@ -130,7 +138,15 @@
         </footer>
     </body>
     <script type="text/javascript"> 
-        
+        $(document).ready(function(){
+          $('.carousel').carousel({
+                dist:0,
+                shift:0,
+                padding:20,
+
+          });
+
+        });
     </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

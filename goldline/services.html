@@ -61,6 +61,19 @@
           <li role="presentation" class="active"><a href="services.html" style="color: black;">Services</a></li>
         </ul>
         </div>
+        <div class="col hide-on-small-only m3 l3" style="float: right; position: fixed; margin-left: 72%">
+                    <div class="toc-wrapper">
+                    <div style="height: 1px;">
+                      <ul class="section table-of-contents">
+                        <li><a href="#Disaster Recovery">Disaster Recovery &amp; Backup</a></li>
+                        <li><a href="#Security">Security Content</a></li>
+                        <li><a href="#Laptop Repair">Laptop Repair</a></li>
+                        <li><a href="#Fax">Printer and Fax Repair</a></li>
+                      </ul>
+                    </div>
+                    </div>
+                </div>
+        <div class="col s12 m6 l10">
         <div class="panel panel-default">
           <div class="panel-heading">
               <div class="media">
@@ -82,7 +95,7 @@
                   <p>Goldline IT are professionals in network service and IT solutions. When you contact us, you won’t just get an answer.<br>you’ll get the full service, and we won’t leave until the job is complete.</p>
                   <footer><cite title="Source Title">Goldline IT</cite></footer>
                 </blockquote>
-                <div class="media">
+                <div class="media section scrollspy" id="Disaster Recovery">
                     <div class="media-left media-middle">
                         <img class="media-object" src="images/services-01.png">
                     </div>
@@ -91,7 +104,7 @@
                     </div>
                     Back up support is essential to any business operations. We implement systems to back up and store your work daily to ensure it is safe. We monitor the system and adjust over time to meet your changing needs. In case of emergency, we create a disaster recovery plan as well as provide our ongoing network support. We also provide office back up.
                 </div>
-                <div class="media">
+                <div class="media section scrollspy" id="Security">
                     <div class="media-left media-middle">
                         <img class="media-object" src="images/services-03.png">
                     </div>
@@ -100,7 +113,7 @@
                     </div>
                     Security in IT systems is of the utmost importance and when dealing with confidential information, we are your team. With such systems as firewalls and anti-virus software, we also provide email and web filtering. You can rest assured that your details and intellectual property is safe and protected. Contact us to identify your needs for secure software/hardware.
                 </div>
-                <div class="media">
+                <div class="media section scrollspy" id="Laptop Repair">
                     <div class="media-left media-middle">
                         <img class="media-object" src="images/services-07.jpg" height="35">
                     </div>
@@ -109,7 +122,7 @@
                     </div>
                     We repair all laptop brands and models, including Apple products.
                 </div>
-                <div class="media">
+                <div class="media section scrollspy" id="Fax">
                     <div class="media-left media-middle">
                         <img class="media-object" src="images/services-08.gif" height="35">
                     </div>
@@ -207,6 +220,7 @@
         </div>
     </div>
     </div>
+    </div>
     </main>
     <footer class="page-footer grey lighten-3">
           <div class="container">
@@ -233,7 +247,7 @@
         </footer>
     </body>
     <script type="text/javascript"> 
-        
+        $('.toc-wrapper').pushpin({ top:110, bottom:500 });
     </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
