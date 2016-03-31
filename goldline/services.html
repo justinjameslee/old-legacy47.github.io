@@ -34,8 +34,36 @@
     <!--Materialize-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/scrollspy.js"></script>
+    <style type="text/css">
+    /* Custom Styles */
+    body{
+        position: relative; /* required */
+    }
+    ul.nav-tabs {
+        z-index: 999;
+    }
+    ul.nav-tabs li {
+    }
+    ul.nav-tabs li:first-child {
+        border-top: none;
+    }
+    ul.nav-tabs li a {
+    }
+    ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover {
+        color: black;
+        border: 0px
+    }
+    ul.nav-tabs li:first-child a {
+    }
+    ul.nav-tabs li:last-child a {
+    }
+    ul.nav-tabs.affix {
+        top: 0px; /* set the top position of pinned element */
+        margin-top: 20px
+    }
+    </style>
   </head>
-  <body class="Site">
+  <body class="Site" data-spy="scroll" data-target="#myScrollspy">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -64,7 +92,8 @@
     <main class="Site-content">
     <div class="container">
     <div class="row">
-        <div class="well well-sm">
+        <div class="col s12 m12 l10">
+        <div class="well well-sm" style="border-bottom: 0px; border-radius: 3px 3px 0px 0px; margin-bottom: 0px;">
         <ul class="nav nav-tabs nav-justified">
           <li role="presentation"><a href="about.html" style="color: black;">About Goldline IT</a></li>
           <li role="presentation"><a href="#" style="color: black;">Contact Us</a></li>
@@ -73,25 +102,7 @@
           <li role="presentation" class="active"><a href="services.html" style="color: black;">Services</a></li>
         </ul>
         </div>
-        <div class="col hide-on-small-only m3 l3" style="float: right; position: fixed; margin-left: 73%">
-                    <div class="toc-wrapper">
-                    <div style="height: 1px;">
-                      <ul class="section table-of-contents">
-                        <li><a href="#Disaster Recovery">Disaster Recovery &amp; Backup</a></li>
-                        <li><a href="#Security">Security Content</a></li>
-                        <li><a href="#Laptop Repair">Laptop Repair</a></li>
-                        <li><a href="#Fax">Printer and Fax Repair</a></li>
-                        <li><a href="#IT">IT Support &amp; Maintenance</a></li>
-                        <li><a href="#Network">Network Services</a></li>
-                        <li><a href="#Hosted">Hosted Services</a></li>
-                        <li><a href="#Internet">Internet Services</a></li>
-                        <li><a href="#Specialist">Specialist Services</a></li>
-                      </ul>
-                    </div>
-                    </div>
-                </div>
-        <div class="col s12 m10 l10">
-        <div class="panel panel-default">
+        <div class="panel panel-default" style="border-top: 0px; border-radius: 0px 0px">
           <div class="panel-heading">
               <div class="media">
                 <div class="media-left media-middle">
@@ -103,16 +114,12 @@
               </div>
           </div>
           <div class="panel-body">
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#solutions" aria-controls="solutions" role="tab" data-toggle="tab">Services</a></li>
-            </ul>
-            <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in active flow-text" id="solutions">
                 <blockquote>
                   <p>Goldline IT are professionals in network service and IT solutions. When you contact us, you won’t just get an answer.<br>you’ll get the full service, and we won’t leave until the job is complete.</p>
                   <footer><cite title="Source Title">Goldline IT</cite></footer>
                 </blockquote>
-                <div class="media section scrollspy" id="Disaster Recovery">
+                <div class="media section scrollspy" id="Disaster-Recovery">
                     <div class="media-left media-middle">
                         <img class="media-object" src="images/services-01.png">
                     </div>
@@ -232,9 +239,30 @@
                     <li>NAVISION</li>
                 </div>
             </div>
-            </div>
           </div>
         </div>
+    </div>
+    <div class="col l2 hide-on-small-only" id="myScrollspy">
+            <ul class="nav nav-tabs nav-stacked" data-offset-top="150" data-spy="affix" style="border-radius: 5px; background: #eee">
+                <li class="active"><a href="#Services">Services</a></li>
+                <li><a href="#Disaster-Recovery">Disaster Recovery &amp; Backup</a></li>
+                <li><a href="#Security">Security Content</a></li>
+            </ul>
+                    <div class="toc-wrapper">
+                    <div style="height: 1px;">
+                      <ul class="section table-of-contents">
+                        <li><a href="#Disaster Recovery">Disaster Recovery &amp; Backup</a></li>
+                        <li><a href="#Security">Security Content</a></li>
+                        <li><a href="#Laptop Repair">Laptop Repair</a></li>
+                        <li><a href="#Fax">Printer and Fax Repair</a></li>
+                        <li><a href="#IT">IT Support &amp; Maintenance</a></li>
+                        <li><a href="#Network">Network Services</a></li>
+                        <li><a href="#Hosted">Hosted Services</a></li>
+                        <li><a href="#Internet">Internet Services</a></li>
+                        <li><a href="#Specialist">Specialist Services</a></li>
+                      </ul>
+                    </div>
+                    </div>
     </div>
     </div>
     </div>
@@ -263,12 +291,11 @@
           </div>
         </footer>
       <script type="text/javascript"> 
-         $(document).ready(function(){
-            $('.scrollspy').scrollSpy({
-                scrollParent: window,
-                offsetTop: 0
-            });
-         });
+         $('#nav').affix({
+            offset: {
+                top: $('#nav').offset().top
+            }
+        });
     </script>
     </body>
 </html>
