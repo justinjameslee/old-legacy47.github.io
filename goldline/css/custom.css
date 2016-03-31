@@ -3718,3 +3718,13 @@ ul li {
     text-align: center;
   }
 }
+
+.scrollspy {
+    position: relative;
+}
+
+#toc {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
