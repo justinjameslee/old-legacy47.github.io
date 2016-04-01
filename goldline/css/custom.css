@@ -3719,9 +3719,9 @@ ul li {
 }
 
 .table-of-contents a.active {
-  font-weight: 350;
-  color: #e7e7e7;
-  font-size: 16px;
+  font-weight: 300;
+  color: grey;
+  font-size: 15.5px;
   padding-left: 18px;
   border-left: 2px solid #ea4a4f;
 }
