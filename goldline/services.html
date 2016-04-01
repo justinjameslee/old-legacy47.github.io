@@ -36,36 +36,6 @@
     <script type="text/javascript" src="js/scrollspy.js"></script>
     <style type="text/css">
     /* Custom Styles */
-    body{
-        position: relative; /* required */
-    }
-    ul.nav-tabs {
-        z-index: 999;
-    }
-    ul.nav-tabs li {
-    }
-    ul.nav-tabs li:first-child {
-        border-top: none;
-    }
-    ul.nav-tabs li a {
-    }
-    ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover {
-        color: black;
-        border: 0px;
-        
-    }
-    ul.nav-tabs li:first-child a {
-    }
-    ul.nav-tabs li:last-child a {
-    }
-    ul.nav-tabs.affix {
-        top: 0px; /* set the top position of pinned element */
-        margin-top: 20px;
-        margin-right: 10px
-    }
-    #small {
-        font-size: 12px    
-    }
     </style>
   </head>
   <body class="Site" data-spy="scroll" data-target="#myScrollspy">
@@ -95,8 +65,10 @@
       </div><!-- /.container-fluid -->
     </nav>
     <main class="Site-content">
+        <br>
+    <div class="container">
     <div class="row">
-        <div class="col s12 m12 l9" style="padding-right: 15px; padding-left: 15px; margin-left: 75px">
+        <div class="col s12 m12 l10">
         <div class="well well-sm" style="border-bottom: 0px; border-radius: 3px 3px 0px 0px; margin-bottom: 0px;">
         <ul class="nav nav-tabs nav-justified">
           <li role="presentation"><a href="about.html" style="color: black;">About Goldline IT</a></li>
@@ -107,7 +79,7 @@
         </ul>
         </div>
         <div class="panel panel-default" style="border-top: 0px; border-radius: 0px 0px">
-          <div class="panel-heading">
+          <div class="panel-heading section scrollspy" id="Services">
               <div class="media">
                 <div class="media-left media-middle">
                     <img class="media-object" src="images/server.png" height="65px">
@@ -117,8 +89,7 @@
                 </div>
               </div>
           </div>
-          <div class="panel-body">
-            <div role="tabpanel" class="tab-pane fade in active flow-text" id="solutions">
+          <div class="panel-body flow-text">
                 <blockquote>
                   <p>Goldline IT are professionals in network service and IT solutions. When you contact us, you won’t just get an answer.<br>you’ll get the full service, and we won’t leave until the job is complete.</p>
                   <footer><cite title="Source Title">Goldline IT</cite></footer>
@@ -242,23 +213,24 @@
                     <li>Seams Systems</li>
                     <li>NAVISION</li>
                 </div>
-            </div>
           </div>
         </div>
     </div>
-    <div class="col hide-on-med-and-down" id="myScrollspy">
-            <ul class="nav nav-tabs nav-stacked hide-on-med-and-down" data-offset-top="90" data-spy="affix" style="border-radius: 5px; background: #eee;">
-                <li class="active" id="small"><a href="#Services">Services</a></li>
-                <li><a href="#Disaster-Recovery" id="small">Disaster Recovery &amp; Backup</a></li>
-                <li><a href="#Security" id="small">Security Content</a></li>
-                <li><a href="#Laptop-Repair" id="small">Laptop Repair</a></li>
-                <li><a href="#Fax" id="small">Printer and Fax Repair</a></li>
-                <li><a href="#IT" id="small">IT Support &amp; Maintenance</a></li>
-                <li><a href="#Network" id="small">Network Services</a></li>
-                <li><a href="#Hosted" id="small">Hosted Services</a></li>
-                <li><a href="#Internet" id="small">Internet Services</a></li>
-                <li><a href="#Specialist" id="small">Specialist Services</a></li>
+    <div class="col l2 hide-on-med-and-down" id="myScrollspy" style="margin-top: 55px">
+            <!--<ul class="nav nav-tabs nav-stacked" data-offset-top="90" data-spy="affix" style="border-radius: 5px; background: #eee; background-color: #f8f8f8; border-color: #e7e7e7;">-->
+            <ul class="table-of-contents" data-spy="affix">
+                <li class="active"><a href="#Services" style="color: black;">Services</a></li>
+                <li><a href="#Disaster-Recovery" style="color: black;">Disaster Recovery &amp; Backup</a></li>
+                <li><a href="#Security" style="color: black;">Security Content</a></li>
+                <li><a href="#Laptop-Repair" style="color: black;">Laptop Repair</a></li>
+                <li><a href="#Fax" style="color: black;">Printer and Fax Repair</a></li>
+                <li><a href="#IT" style="color: black;">IT Support &amp; Maintenance</a></li>
+                <li><a href="#Network" style="color: black;">Network Services</a></li>
+                <li><a href="#Hosted" style="color: black;">Hosted Services</a></li>
+                <li><a href="#Internet" style="color: black;">Internet Services</a></li>
+                <li><a href="#Specialist" style="color: black;">Specialist Services</a></li>
             </ul>
+    </div>
     </div>
     </div>
     </main>
@@ -286,6 +258,9 @@
           </div>
         </footer>
       <script type="text/javascript"> 
+        $(document).ready(function(){
+            $('.scrollspy').scrollSpy();
+          });
          $('#nav').affix({
             offset: {
                 top: $('#nav').offset().top
