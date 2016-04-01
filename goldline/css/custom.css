@@ -3719,7 +3719,7 @@ ul li {
 }
 
 .table-of-contents a.active {
-  font-weight: 500;
+  font-weight: 400;
   color: #e7e7e7;
   font-size: 16px;
   padding-left: 18px;
