@@ -22,6 +22,16 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--Materialize JS-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--Bootstrap-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Materialize-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
   </head>
   <body class="Site">
     <nav class="navbar navbar-default">
@@ -49,9 +59,11 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+    <br>
     <main class="Site-content">
     <div class="container">
     <div class="row">
+        <div class="col s12 m12 l10">
         <div class="well well-sm" style="border-bottom: 0px; border-radius: 3px 3px 0px 0px; margin-bottom: 0px;">
         <ul class="nav nav-tabs nav-justified">
           <li role="presentation"><a href="about.html" style="color: black;">About Us</a></li>
@@ -62,7 +74,7 @@
         </ul>
         </div>
         <div class="panel panel-default" style="border-top: 0px; border-radius: 0px 0px">
-          <div class="panel-heading">
+          <div class="panel-heading section scrollspy" id="Solutions">
               <div class="media">
                 <div class="media-left media-middle">
                     <img class="media-object" src="images/server.png" height="65px">
@@ -73,14 +85,9 @@
               </div>
           </div>
           <div class="panel-body flow-text">
+                <div class="media section scrollspy" id="Microsoft">
                 <h3 class="black-text">Microsoft Office 365</h3>
-                Microsoft Office 365 is the IT solution for your business. You can organize your e-mails, schedules, calendars and documents with ease anytime, anywhere – Office 365 is online 24/7 and is accessible on any computer and most handheld devices. Microsoft Office 365 also has the latest protection against spam and viruses, as well as a enterprise-grade reliability and disaster recovery guarantee to keep your data safe. At Goldline IT we can help you set up your business with Microsoft Office 365 so you can keep it organised and running efficiently while we manage your IT networks.
-                <h3 class="black-text">Medical IT Solutions</h3>
-                Over the last decade, the medical industry has embraced the addition of IT based systems in their daily operations, simplifying their databases, schedules and procedures while increasing in efficiency and reliability. We understand that each medical practice is unique and requires a highly dynamic IT support structure to ensure the highest levels of efficiency and safety within the practice, and at Goldline IT we can offer experienced medical IT support to help you manage your IT systems. We support HCN, Medical Director, Parasoft, Best Practice, ZedMed, Genie and a host of other medical applications.
-                <h3 class="black-text">Mailguard</h3>
-                MailGuard provides a comprehensive range of Cloud based solutions addressing security and real-time risk intelligence for businesses. MailGuard constantly monitors and combats new threats in real-time while providing access to your emails via any web browser globally in a fully functioning, fully protected email environment, reducing the risk of lost opportunities. Goldline IT can help you set up your business with MailGuard to provide email protection, filtering and archiving without the need for you to worry about the technical side of things.
-                <div class="media">
-                <h3 class="black-text">Organize Your Business</h3>
+                Microsoft Office 365 is the IT solution for your business. You can organize your e-mails, schedules, calendars and documents with ease anytime, anywhere – Office 365 is online 24/7 and is accessible on any computer and most handheld devices. Microsoft Office 365 also has the latest protection against spam and viruses, as well as a enterprise-grade reliability and disaster recovery guarantee to keep your data safe. At Goldline IT we can help you set up your business with Microsoft Office 365 so you can keep it organised and running efficiently while we manage your IT networks.<br><br>
                 <li>Manage your businesses’ emails and schedules with Microsoft Office 365</li>
                 <li>Accessible anywhere, 24/7</li>
                 <br>
@@ -88,8 +95,9 @@
                     <img src="images/office_365.png" height="40" style="padding-left: 20px">
                 </div>
                 </div>
-                <div class="media">
+                <div class="media section scrollspy" id="Medical">
                 <h3 class="black-text">Medical IT Solutions</h3>
+                Over the last decade, the medical industry has embraced the addition of IT based systems in their daily operations, simplifying their databases, schedules and procedures while increasing in efficiency and reliability. We understand that each medical practice is unique and requires a highly dynamic IT support structure to ensure the highest levels of efficiency and safety within the practice, and at Goldline IT we can offer experienced medical IT support to help you manage your IT systems. We support HCN, Medical Director, Parasoft, Best Practice, ZedMed, Genie and a host of other medical applications.<br><br>
                 <li>Experienced Medical IT solutions tailored for you needs</li>
                 <li>Leading titles of medical applications are supported, such as Best Practice, ZedMed, Medical Director, Pracsoft and Genie</li>
                 <br>
@@ -101,8 +109,9 @@
                     <img class="hide-on-small-only" src="images/genie.png" height="60"style="padding-left: 20px">
                 </div>
                 </div>
-                <div class="media">
+                <div class="media section scrollspy" id="Protection">
                 <h3 class="black-text">E-Mail Protection</h3>
+                MailGuard provides a comprehensive range of Cloud based solutions addressing security and real-time risk intelligence for businesses. MailGuard constantly monitors and combats new threats in real-time while providing access to your emails via any web browser globally in a fully functioning, fully protected email environment, reducing the risk of lost opportunities. Goldline IT can help you set up your business with MailGuard to provide email protection, filtering and archiving without the need for you to worry about the technical side of things.<br><br>
                 <li>Latest protection against spam and viruses for your emails</li>
                 <li>Access your emails in a safe and protected environment from anywhere in the world</li>
                 <br>
@@ -110,16 +119,27 @@
                     <img src="images/mailguard2.png" height="45" style="padding-left: 15px">
                 </div>
                 </div>
-                <div class="media">
+                <div class="media section scrollspy" id="Internet">
                 <h3 class="black-text">Internet Services Provider</h3>
                 Websurf is an internet service provider managed by Goldline IT. It covers corporate-level internet connection services, manages site-to-site DNS and provides hosting solutions, allowing well managed and hassle-free solutions for you business’ internet needs.    
                 <br>
                 <div class="media-left">
                     <img src="images/websurf.gif" height="90" style="padding-left: 20px">
                 </div>
+                <br>
                 </div>
           </div>
         </div>
+    </div>
+    <div class="col m4 l2 hide-on-med-and-down" id="myScrollspy" style="margin-top: 55px;">
+        <ul class="table-of-contents" data-spy="affix">
+                <li class="active"><a href="#Solutions" style="color: black;">Solutions</a></li>
+                <li><a href="#Microsoft" style="color: black;">Microsoft Office 365</a></li>
+                <li><a href="#Medical" style="color: black;">Medical IT Solutions</a></li>
+                <li><a href="#Protection" style="color: black;">E-Mail Protection</a></li>
+                <li><a href="#Internet" style="color: black;">Internet Services Provider</a></li>
+        </ul>
+    </div>
     </div>
     </div>
     </main>
@@ -146,19 +166,10 @@
             </div>
           </div>
         </footer>
-    </body>
-    <script type="text/javascript"> 
-        
+      <script type="text/javascript"> 
+        $(document).ready(function(){
+            $('.scrollspy').scrollSpy();
+          });
     </script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!--Materialize JS-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!--Bootstrap-->
-    <script src="js/bootstrap.min.js"></script>
-    <!--Materialize-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    
-
+    </body>
 </html>

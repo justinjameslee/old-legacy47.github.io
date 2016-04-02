@@ -25,6 +25,16 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+      
+    <!--Materialize JS-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!--Bootstrap-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Materialize-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
   </head>
   <body class="Site">
     <nav class="navbar navbar-default">
@@ -52,12 +62,14 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+    <br>
     <main class="Site-content">
     <div class="container">
     <div class="row">
+        <div class="col s12 m12 l10">
         <div class="well well-sm" style="border-bottom: 0px; border-radius: 3px 3px 0px 0px; margin-bottom: 0px;">
         <ul class="nav nav-tabs nav-justified">
-          <li role="presentation" class="active"><a href="#" style="color: black;">About Us</a></li>
+          <li role="presentation" class="active"><a href="about.html" style="color: black;">About Us</a></li>
           <li role="presentation"><a href="#" style="color: black;">Contact Us</a></li>
           <li role="presentation"><a href="products.html" style="color: black;">Products</a></li>
           <li role="presentation"><a href="solutions.html" style="color: black;">Solutions</a></li>
@@ -65,7 +77,7 @@
         </ul>
         </div>
         <div class="panel panel-default" style="border-top: 0px; border-radius: 0px 0px;">
-          <div class="panel-heading">
+          <div class="panel-heading section scrollspy" id="Goldline">
               <div class="media">
                 <div class="media-left media-middle">
                   <img class="media-object" src="images/server.png" height="65px">
@@ -76,10 +88,15 @@
               </div>
           </div>
           <div class="panel-body flow-text">
+                <div class="section scrollspy" id="Why">
                 <h3 class="black-text">Why Choose Goldline IT?</h3>
                 We, at Goldline IT, have been servicing businesses for more than 18 years. We are service professionals who treat your business as if it were our own and provide you with dedicated network and IT solutions.<br><br>We are experts in the medical and professional service fields and have created complex and integrated systems for these specialised industries. With software such as Best Practice, Medical Director, Pracsoft, Frontdesk and more, we can provide the support your business needs.<br><br>We also have experience with clients in retail, financial planning, accountancy, clothing importers, manufacturing, engineering, real estate, shipping and government. No matter what industry you are in, whether your business is small or large, we are your total IT provider.<br><br>Our goal is to provide total end-to-end IT solutions. We come to your workplace and audit your network, either by working with your current system or implementing an entire network. We have experienced and knowledgeable staff and partners to ensure we provide you with the best service as well as software/hardware and related products. Whatever your system needs, we will be able to source the right IT provider to give you the network support you need.<br><br>We are available for ongoing support at all times through our dedicated service channels. <a href="#">Contact us</a> and discuss how we can work with you to provide the most efficient network system for you.
+                </div>
+                <div class="section scrollspy" id="Clients">
                 <h3 class="black-text">Our Clients</h3>
                 At Goldline IT, our clients’ system issues are our priority. We address your network needs in the same way we would our own and give you the attention you deserve. With extensive experience in the medical industry and professional services, our systems and operations are advanced enough to handle any industry-specific software, and we understand the need for rapid resolution of problems.<br><br>We provide you with IT solutions to enable a smooth and efficient network. Clients can enjoy peace of mind with secure software/hardware and ongoing network support and service.<br><br>Testimonials from any of our satisfied customers are available on request.
+                </div>
+                <div class="section scrollspy" id="Partners">
                 <h3 class="black-text">Our Partners</h3>
                 Our partners allow us to provide you with a total network solution. Partnering with HP, IBM, Microsoft, CITRIX, HCN, Mailguard, Best Practice, VMWare, Trend Micro, Intel, Pracsoft, Symantec, Cisco, StorageCraft and many more, we can provide quality IT solutions and backup support by finding the product or service to suit your needs. Learn more about our partners and how together we can help you.
                 <br><br>
@@ -101,11 +118,20 @@
                        <img src="images/hcn.png" alt="HCN">
                     </div>
                  </div>
+                <br>
+                </div>
             </div>
-            </div>
-          </div>
         </div>
         </div>
+        <div class="col m4 l2 hide-on-med-and-down" id="myScrollspy" style="margin-top: 55px;">
+        <ul class="table-of-contents" data-spy="affix">
+                <li class="active"><a href="#Goldline" style="color: black;">About Goldline IT</a></li>
+                <li><a href="#Why" style="color: black;">Why Choose Us?</a></li>
+                <li><a href="#Clients" style="color: black;">Our Clients</a></li>
+                <li><a href="#Partners" style="color: black;">Our Partners</a></li>
+        </ul>
+        </div>
+    </div>
     </div>
     </main>
     
@@ -132,10 +158,10 @@
             </div>
           </div>
         </footer>
-      <script src="js/jquery-1.9.1.min.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
       <script type="text/javascript">
-         jQuery(document).ready(function($) {	  
+         jQuery(document).ready(function($){	
+           $('.scrollspy').scrollSpy();
+             
            $("#carousel").owlCarousel({
             mouseDrag: true,
             touchDrag: true,
@@ -171,18 +197,7 @@
                 
             
            });
-         });	 
+         });
       </script>
     </body>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!--Materialize JS-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!--Bootstrap-->
-    <script src="js/bootstrap.min.js"></script>
-    <!--Materialize-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    
-
 </html>

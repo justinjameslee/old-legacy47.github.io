@@ -22,6 +22,16 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--Materialize JS-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--Bootstrap-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Materialize-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
   </head>
   <body class="Site">
     <nav class="navbar navbar-default">
@@ -49,12 +59,14 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+    <br>
     <main class="Site-content">
     <div class="container">
     <div class="row">
+        <div class="col s12 m12 l10">
         <div class="well well-sm" style="border-bottom: 0px; border-radius: 3px 3px 0px 0px; margin-bottom: 0px;">
         <ul class="nav nav-tabs nav-justified">
-          <li role="presentation"><a href="about.html" style="color: black;">About Goldline IT</a></li>
+          <li role="presentation"><a href="about.html" style="color: black;">About Us</a></li>
           <li role="presentation"><a href="#" style="color: black;">Contact Us</a></li>
           <li role="presentation" class="active"><a href="products.html" style="color: black;">Products</a></li>
           <li role="presentation"><a href="solutions.html" style="color: black;">Solutions</a></li>
@@ -62,7 +74,7 @@
         </ul>
         </div>
         <div class="panel panel-default" style="border-top: 0px; border-radius: 0px 0px">
-          <div class="panel-heading">
+          <div class="panel-heading section scrollspy" id="Products">
               <div class="media">
                 <div class="media-left media-middle">
                     <img class="media-object" src="images/server.png" height="65px">
@@ -73,13 +85,19 @@
               </div>
           </div>
           <div class="panel-body flow-text">
+                <div class="section scrollspy" id="OurProducts">
                 <h3 class="black-text">Our Products</h3>
-                With strong IT industry alliances, we provide a full range of product solutions such as hardware and software, domains, web hosting, email hosting and recommendations for web designers and developers. We are not just limited to computers.<br><br>Some of the items we stock include:<h3 class="black-text">Hardware</h3>
+                With strong IT industry alliances, we provide a full range of product solutions such as hardware and software, domains, web hosting, email hosting and recommendations for web designers and developers. We are not just limited to computers.<br><br>Some of the items we stock include:<br>
+                </div>
+                <div class="section scrollspy" id="Hardware">
+                <h3 class="black-text">Hardware</h3>
                 <li>Servers and workstations (HP, IBM, Fujitsu, Intel and customs boxes)</li>
                 <li>Firewall routers and switches (CISCO, Sonic Wall, Netgear and Dlink)</li>
                 <li>Laptops, netbooks and tablets (HP, Toshiba, Lenovo, ASUS and Acer)</li>
                 <li>NAS storage devices (CISCO, QNAP and Maxtor)</li>
                 <li>Thin Clients (HP and Wyse)</li>
+                </div>
+                <div class="section scrollspy" id="Software">
                 <h3 class="black-text">Software</h3>
                 <li>VMware Solutions</li>
                 <li>The full suite of Microsoft products</li>
@@ -88,8 +106,19 @@
                 <li>Storage Craft – Shadow Protect backup solutions</li>
                 <br>...just to name a few.<br><br>
                 <a href="#">Contact us</a> to discuss tailor made solutions to match your system and service needs.
+                <br><br>
+                </div>
           </div>
         </div>
+    </div>
+    <div class="col m4 l2 hide-on-med-and-down" id="myScrollspy" style="margin-top: 55px;">
+        <ul class="table-of-contents" data-spy="affix">
+                <li class="active"><a href="#Products" style="color: black;">Products</a></li>
+                <li><a href="#OurProducts" style="color: black;">Our Products</a></li>
+                <li><a href="#Hardware" style="color: black;">Hardware</a></li>
+                <li><a href="#Software" style="color: black;">Software</a></li>
+        </ul>
+    </div>
     </div>
     </div>
     </main>
@@ -116,19 +145,10 @@
             </div>
           </div>
         </footer>
-    </body>
     <script type="text/javascript"> 
-        
+        $(document).ready(function(){
+            $('.scrollspy').scrollSpy();
+          });
     </script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!--Materialize JS-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!--Bootstrap-->
-    <script src="js/bootstrap.min.js"></script>
-    <!--Materialize-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    
-
+    </body>
 </html>
