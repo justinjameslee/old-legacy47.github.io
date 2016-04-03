@@ -3718,7 +3718,7 @@ ul li {
 }
 
 .table-of-contents li {
-  padding: 3px 0;
+  padding: 4px 0;
 }
 
 .table-of-contents a {
@@ -3726,7 +3726,7 @@ ul li {
   font-weight: 300;
   color: #757575;
   padding-left: 20px;
-  height: 2rem;
+  height: 1.5rem;
   line-height: 1.5rem;
   letter-spacing: .4;
   display: inline-block;
