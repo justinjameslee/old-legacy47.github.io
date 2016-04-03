@@ -85,13 +85,14 @@
               </div>
           </div>
           <div class="panel-body flow-text">
-                <div class="section scrollspy" id="Details">
                 <div class="row">
                 <div class="container">
+                
                 <h1 class="black-text center-align hide-on-small-only">Contact Details</h1>
                 <h3 class="black-text center-align hide-on-med-and-up">Contact Details</h3>
                 <div class="col s12 m10 l8 offset-l2 offset-m1">
                     <div class="well well-sm">
+                    <div class="scrollspy" id="Details">
                     <div class="card grey lighten-3 hoverable">
                         <div class="card-image">
                             <div class="center-align">
@@ -117,15 +118,16 @@
                             <br>
                             Fax: 03 9816 8344
                             <br><br>
-                            Open: Monday to Friday
+                            Open From: Monday to Friday
                             <br>
                             Opening Hours: 9am to 6pm
                             <br>
-                            Weekends open by appointment
+                            Weekends: Open by appointment
                         </p>
                         </div>
                     </div>
                     </div>
+                </div>
                 </div>
                 <div class="col s12 m12 l12 section scrollspy" id="Form">
                     <br>
@@ -144,10 +146,41 @@
                     </div>
                     </div>
                     <div class="row">
-                    <div class="input-field col s12">
+                    <div class="input-field col s6">
                       <i class="material-icons prefix">email</i>
                       <input placeholder="justinlee@exmaple.com" id="email" type="email" class="validate">
-                      <label for="email">Email</label>
+                      <label for="email" data-error="" data-succes="">Email</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <i class="material-icons prefix">phone</i>
+                      <input placeholder="0411-111-111" id="phone" type="tel" class="validate">
+                      <label for="phone" data-error="" data-succes="">Telephone</label>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="input-field col s6 l3">
+                    <p>
+                      <input name="group1" type="radio" id="test1" />
+                      <label for="test1">Subject 1</label>
+                    </p>
+                    </div>
+                    <div class="input-field col s6 l3">
+                    <p>
+                      <input name="group1" type="radio" id="test2" />
+                      <label for="test2">Subject 2</label>
+                    </p>
+                    </div>
+                    <div class="input-field col s6 l3">
+                    <p>
+                      <input name="group1" type="radio" id="test3" />
+                      <label for="test3">Subject 3</label>
+                    </p>
+                    </div>
+                    <div class="input-field col s6 l3">
+                    <p>
+                      <input name="group1" type="radio" id="test4" />
+                      <label for="test4">Subject 4</label>
+                    </p>
                     </div>
                     </div>
                     <div class="row">
@@ -160,7 +193,6 @@
                 </div>
                 </div>
               </div>
-        </div>
         </div>
         </div>
     </div>

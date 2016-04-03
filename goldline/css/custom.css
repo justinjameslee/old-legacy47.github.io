@@ -4471,8 +4471,8 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #ff9100;
-  box-shadow: 0 1px 0 0 #ff9100;
+  border-bottom: 1px solid #ffab40;
+  box-shadow: 0 1px 0 0 #ffab40;
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -4513,8 +4513,8 @@ input[type=search].valid,
 input[type=search]:focus.valid,
 textarea.materialize-textarea.valid,
 textarea.materialize-textarea:focus.valid {
-  border-bottom: 1px solid #ff6d00;
-  box-shadow: 0 1px 0 0 #ff6d00;
+  border-bottom: 1px solid #ff9100;
+  box-shadow: 0 1px 0 0 #ff9100;
 }
 
 input:not([type]).valid + label:after,
@@ -4763,7 +4763,7 @@ textarea.materialize-textarea {
   display: inline-block;
   height: 25px;
   line-height: 25px;
-  font-size: 1rem;
+  font-size: 1.7rem;
   transition: .28s ease;
   /* webkit (konqueror) browsers */
   -webkit-user-select: none;
