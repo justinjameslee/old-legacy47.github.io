@@ -3725,8 +3725,8 @@ ul li {
   display: inline-block;
   font-weight: 300;
   color: #757575;
-  padding-left: 20px;
-  height: 2.5rem;
+  padding-left: 15px;
+  height: 3rem;
   line-height: 1.5rem;
   letter-spacing: .4;
   display: inline-block;
@@ -3743,6 +3743,6 @@ ul li {
   font-weight: 300;
   color: grey;
   font-size: 16px;
-  padding-left: 18px;
+  padding-left: 13px;
   border-left: 2px solid #ea4a4f;
 }
