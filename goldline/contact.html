@@ -22,9 +22,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      
     <!--Materialize JS-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -32,6 +30,18 @@
     <script src="js/bootstrap.min.js"></script>
     <!--Materialize-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--Validate-->
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            
+            $('.scrollspy').scrollSpy();
+            
+            $('#message').trigger('autoresize'); 
+            
+        });
+    </script>
+    <style>
+    </style>
   </head>
   <body class="Site">
     <nav class="navbar navbar-default">
@@ -128,89 +138,54 @@
                 </div>
                 </div>
               </div>
-              <div class="container">
-                <h3 class="black-text center-align hide-on-med-and-up">Contact Details</h3>
-                <div class="col s12 m10 l8 offset-l2 offset-m1 hide-on-med-and-up">
-                <div class="card grey lighten-3">
-                        <div class="card-image">
-                                <div class="google-maps">
-                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.065158771983!2d145.0741393158676!3d-37.81194274171332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6413e704c1fe7%3A0x2d59bf2c1e5e334b!2s243+Whitehorse+Rd%2C+Balwyn+VIC+3103!5e0!3m2!1sen!2sau!4v1459667126844" width="400" height="300" frameborder="0" style="border: 0" allowfullscreen></iframe>
-                                </div>
-                        </div>
-                        <div class="card-content black-text center-align">
-                        <span class="card-title" style="font-size: 18px">Goldline IT</span>
-                        <br>
-                        <p class="flow-text">
-                            243 Whitehorse Road
-                            <br>
-                            Balwyn 3103
-                            <br>
-                            www.GoldlineIT.com.au
-                            <br>
-                            support@goldlineit.com.au
-                            <br>
-                            Ph: 03 9816 8377
-                            <br>
-                            Fax: 03 9816 8344
-                            <br><br>
-                            Open From: Monday to Friday
-                            <br>
-                            Opening Hours: 9am to 6pm
-                            <br>
-                            Weekends: Open by appointment
-                        </p>
-                        </div>
-                </div>
-                </div>
-              </div>
-                <div class="col s12 m12 l12 section scrollspy" id="Form">
-                    <br>
-                    <h3 class="black-text" style="margin-left: 30px">Submit a Form</h3>
-                    <br><br>
-                    <div class="row">
+              <form class="col s12 m12 l12 section scrollspy" id="contact" method="post" action="/contact.php">
+                  <br>
+                  <h3 class="black-text" style="margin-left: 30px">Submit a Form</h3>
+                  <br><br>
+                  <div class="row">
                     <div class="input-field col s12 m6 l6">
-                      <i class="material-icons prefix">account_circle</i>
-                      <input placeholder="Justin" id="first_name" type="text" class="validate">
-                      <label for="first_name">First Name</label>
+                        <i class="material-icons prefix">account_circle</i>
+                        <input placeholder="Justin" id="first_name" type="text" class="validate" name="first_name" required>
+                        <label for="first_name">First Name</label>
                     </div>
                     <div class="input-field col s12 m6 l6">
-                      <i class="material-icons prefix">account_circle</i>
-                      <input placeholder="Lee" id="last_name" type="text" class="validate">
-                      <label for="last_name">Last Name</label>
+                        <i class="material-icons prefix">account_circle</i>
+                        <input placeholder="Lee" id="last_name" type="text" class="validate" name="last_name" required>
+                        <label for="last_name">Last Name</label>
                     </div>
-                    </div>
-                    <div class="row">
+                  </div>
+                  <div class="row">
                     <div class="input-field col s12 m6 l6">
                       <i class="material-icons prefix">email</i>
-                      <input placeholder="justinlee@exmaple.com" id="email" type="email" class="validate">
-                      <label for="email" data-error="" data-succes="">Email</label>
+                      <input placeholder="justinlee@exmaple.com" id="email" type="email" class="validate" name="email" required>
+                      <label for="email" data-error="wrong" data-succes="right">Email</label>
                     </div>
                     <div class="input-field col s12 m6 l6">
                       <i class="material-icons prefix">phone</i>
-                      <input placeholder="0411-111-111" id="phone" type="tel" class="validate">
-                      <label for="phone" data-error="" data-succes="">Telephone</label>
+                      <input placeholder="0411-111-111" id="phone" type="tel" class="validate" name="phone" required>
+                      <label for="phone">Telephone</label>
                     </div>
                     </div>
-                    <div class="row">
+                  <div class="row">
                     <div class="input-field col s12 m12 l12">
                       <i class="material-icons prefix">label</i>
-                      <input placeholder="Disaster Recovery" id="subject" type="text" class="validate">
-                      <label for="subject" data-error="" data-succes="">Subject</label>
+                      <input placeholder="Disaster Recovery" id="subject" type="text" class="validate" name="subject" required>
+                      <label for="subject">Subject</label>
                     </div>
                     </div>
                     <div class="row">
                     <div class="input-field col s12">
                       <i class="material-icons prefix">mode_edit</i>
-                      <textarea id="message" class="materialize-textarea" length="250"></textarea>
+                      <textarea id="message" class="materialize-textarea" length="250" name="message" required></textarea>
                       <label for="message" style="font-size: 1.5rem;">Message</label>
                     </div>
-                    <div class="input-field col s12" style="margin-left: 30px">
-                        <button class="waves-effect waves-light btn orange accent-3" type="submit" name="action">Submit
+                    <div class="input-field col s12">
+                        <button class="waves-effect waves-light btn orange accent-3 right" type="submit" name="action">Submit
                         <i class="material-icons right">send</i>    
                         </button> 
                     </div>
                     </div>
-                </div>
+                </form>
         </div>
         </div>
     </div>
@@ -324,49 +299,49 @@
                 </div>
                 </div>
               </div>
-                <div class="col s12 m12 l12 section scrollspy" id="Form">
+                <div class="col s12 m12 l12 section scrollspy" id="Form2">
                     <br>
                     <h3 class="black-text" style="margin-left: 30px">Submit a Form</h3>
                     <br><br>
                     <div class="row">
                     <div class="input-field col s12 m6 l6">
                       <i class="material-icons prefix">account_circle</i>
-                      <input placeholder="Justin" id="first_name" type="text" class="validate">
+                      <input placeholder="Justin" id="first_name" type="text" class="validate" name="first_name">
                       <label for="first_name">First Name</label>
                     </div>
                     <div class="input-field col s12 m6 l6">
                       <i class="material-icons prefix">account_circle</i>
-                      <input placeholder="Lee" id="last_name" type="text" class="validate">
+                      <input placeholder="Lee" id="last_name" type="text" class="validate" name="last_name">
                       <label for="last_name">Last Name</label>
                     </div>
                     </div>
                     <div class="row">
                     <div class="input-field col s12 m6 l6">
                       <i class="material-icons prefix">email</i>
-                      <input placeholder="justinlee@exmaple.com" id="email" type="email" class="validate">
+                      <input placeholder="justinlee@exmaple.com" id="email" type="email" class="validate" name="email">
                       <label for="email" data-error="" data-succes="">Email</label>
                     </div>
                     <div class="input-field col s12 m6 l6">
                       <i class="material-icons prefix">phone</i>
-                      <input placeholder="0411-111-111" id="phone" type="tel" class="validate">
+                      <input placeholder="0411-111-111" id="phone" type="tel" class="validate" name="phone">
                       <label for="phone" data-error="" data-succes="">Telephone</label>
                     </div>
                     </div>
                     <div class="row">
                     <div class="input-field col s12 m12 l12">
                       <i class="material-icons prefix">label_outline</i>
-                      <input placeholder="Disaster Recovery" id="subject" type="text" class="validate">
+                      <input placeholder="Disaster Recovery" id="subject" type="text" class="validate" name="subject">
                       <label for="subject" data-error="" data-succes="">Subject</label>
                     </div>
                     </div>
                     <div class="row">
                     <div class="input-field col s12">
                       <i class="material-icons prefix">mode_edit</i>
-                      <textarea id="message" class="materialize-textarea" length="250"></textarea>
+                      <textarea id="message" class="materialize-textarea" length="250" name="message"></textarea>
                       <label for="message" style="font-size: 1.5rem;">Message</label>
                     </div>
                     <div class="input-field col s12" style="margin-left: 30px">
-                        <button class="waves-effect waves-light btn orange accent-3" type="submit" name="action">Submit
+                        <button class="waves-effect waves-light btn orange accent-3" type="submit" name="submit" value="Submit">Submit
                         <i class="large material-icons right">send</i>    
                         </button> 
                     </div>
@@ -400,12 +375,5 @@
             </div>
           </div>
         </footer>
-    <script type="text/javascript"> 
-        $(document).ready(function(){
-            $('.scrollspy').scrollSpy();
-            
-            $('#message').trigger('autoresize');
-          });
-    </script>
     </body>
 </html>
