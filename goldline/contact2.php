@@ -1,3 +1,40 @@
+<?php
+if (isset($_POST['action'])) {
+    //who to send the email to  
+    
+    $email_to = "justinivip@gmail.com";
+     
+    //Get data from form
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email_from = $_POST['email'];
+    $phone = $_POST['phone'];
+    $email_subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+
+    //Create Email Content
+    $email_message = "";
+    $email_message .= "First Name: ".$first_name."\n";
+    $email_message .= "Last Name: ".$last_name."\n";
+    $email_message .= "Email: ".$email_from."\n";
+    $email_message .= "Telephone: ".$phone."\n";
+    $email_message .= "Subject: ".$email_subject."\n";
+    $email_message .= "Details: ".$message."\n";
+    
+
+    //Make headers
+    $headers = 'From: '.$email_from."\r\n".
+        'Reply-To: '.$email_from."\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+
+    //Send Email
+    @mail($email_to, $email_subject, $email_message, $headers); 
+    
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -186,6 +223,7 @@
                     </div>
                     </div>
                 </form>
+              <?=$thankYou ?>
         </div>
         </div>
     </div>

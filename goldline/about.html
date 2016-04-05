@@ -165,7 +165,7 @@
                 <h3 class="black-text">Our Partners</h3>
                 Our partners allow us to provide you with a total network solution. Partnering with HP, IBM, Microsoft, CITRIX, HCN, Mailguard, Best Practice, VMWare, Trend Micro, Intel, Pracsoft, Symantec, Cisco, StorageCraft and many more, we can provide quality IT solutions and backup support by finding the product or service to suit your needs. Learn more about our partners and how together we can help you.
                 <br><br>
-                    <div id="carousel" class="owl-carousel">
+                    <div id="carousel2" class="owl-carousel">
                        <img src="images/microsoft.png" alt="Microsoft">
                        <img src="images/cisco.png" alt="Cisco">
                        <img src="images/Intel.png" alt="Intel">
@@ -249,6 +249,41 @@
                 
             
            });
+            $("#carousel2").owlCarousel({
+                mouseDrag: true,
+                touchDrag: true,
+                autoplay : true,
+                dots: false,
+                autoplayTimeout: 1500,
+                autoplayHoverPause: true,
+                loop: true,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    360: {
+                        items: 3
+                    },
+                    450: {
+                        items: 4
+                    },
+                    620: {
+                        items: 5
+                    },
+                    740: {
+                        items: 6
+                    },
+                    940: {
+                        items: 7
+                    },
+                    1524: {
+                        items: 8
+                    }
+                }
+
+
+               });
          });
       </script>
     </body>

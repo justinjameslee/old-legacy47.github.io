@@ -46,7 +46,7 @@ if (isset($_POST['email'])) {
     </head>
       
     <body>
-        GG WP!!!
+        yay.
     </body>
   </html>
 
