@@ -5,9 +5,9 @@
 //Any usage of the code must include credit given to Snapp Development LLC in the form of a link to www.snappdev.net
 
 
-if (isset($_POST['email'])) {
-    //who to send the email to  
+if (isset($_POST['action'])) {
     
+    //who to send the email to  
     $email_to = "justinivip@gmail.com";
      
     //Get data from form
