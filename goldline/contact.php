@@ -12,6 +12,7 @@ $response = null;
 // check secret key
 $reCaptcha = new ReCaptcha($secret);
 
+<<<<<<< HEAD
 // if submitted check response
 if ($_POST["g-recaptcha-response"]) {
     $response = $reCaptcha->verifyResponse(
@@ -21,6 +22,20 @@ if ($_POST["g-recaptcha-response"]) {
 }
  
 ?>
+=======
+if (isset($_POST['action'])) {
+    
+    //who to send the email to  
+    $email_to = "justinivip@gmail.com";
+     
+    //Get data from form
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email_from = $_POST['email'];
+    $phone = $_POST['phone'];
+    $email_subject = $_POST['subject'];
+    $message = $_POST['message'];
+>>>>>>> origin/master
 
 <?php
  
@@ -108,6 +123,7 @@ if(isset($_POST['action'])) {
     <!--Custom CSS-->
     <link href="css/custom.css" rel="stylesheet">
       
+<<<<<<< HEAD
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -281,6 +297,10 @@ if(isset($_POST['action'])) {
             </div>
           </div>
         </footer>
+=======
+    <body>
+        yay.
+>>>>>>> origin/master
     </body>
 </html>
 

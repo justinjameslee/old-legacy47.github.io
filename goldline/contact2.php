@@ -1,4 +1,40 @@
-<!--Created for Goldline IT by Justin Lee on April 6, 2016-->
+<?php
+if (isset($_POST['action'])) {
+    //who to send the email to  
+    
+    $email_to = "justinivip@gmail.com";
+     
+    //Get data from form
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email_from = $_POST['email'];
+    $phone = $_POST['phone'];
+    $email_subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+
+    //Create Email Content
+    $email_message = "";
+    $email_message .= "First Name: ".$first_name."\n";
+    $email_message .= "Last Name: ".$last_name."\n";
+    $email_message .= "Email: ".$email_from."\n";
+    $email_message .= "Telephone: ".$phone."\n";
+    $email_message .= "Subject: ".$email_subject."\n";
+    $email_message .= "Details: ".$message."\n";
+    
+
+    //Make headers
+    $headers = 'From: '.$email_from."\r\n".
+        'Reply-To: '.$email_from."\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+
+    //Send Email
+    @mail($email_to, $email_subject, $email_message, $headers); 
+    
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +45,7 @@
     <title>Goldline IT</title>
       
     <!--Icon for Goldline-->
-    <link rel="shortcut icon" href="images/favicon.ico?v=2" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.png">
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Bootstrap -->
@@ -23,7 +59,6 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
       
     <!--Materialize JS-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -33,7 +68,6 @@
     <!--Materialize-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--Validate-->
-    <script src='https://www.google.com/recaptcha/api.js'></script>
     <script type="text/javascript"> 
         $(document).ready(function(){
             
@@ -41,67 +75,12 @@
             
             $('#message').trigger('autoresize'); 
             
-            function once(fn, context) { 
-                var result;
-
-                return function() { 
-                    if(fn) {
-                        result = fn.apply(context || this, arguments);
-                        fn = null;
-                    }
-
-                    return result;
-                };
-            }
-            
-            var error = once(function() {
-                $('<p style="color:red !important; margin-left: 30px;" class=error-captcha"><span class="glyphicon glyphicon-remove " ></span> Please complete the captcha.</p>" ').insertAfter("#validate");
-            });
-            
-            var error_name = once(function() {
-                 $('<p style="color:red !important; margin-left: 30px;" class=error-captcha"><span class="glyphicon glyphicon-remove " ></span> Please enter your name.</p>" ').insertAfter("#name");
-            })
-            
-            var error_email = once(function() {
-                 $('<p style="color:red !important; margin-left: 30px;" class=error-captcha"><span class="glyphicon glyphicon-remove " ></span> Please enter a valid email.</p>" ').insertAfter("#email");
-            })
-            
-            var error_message = once(function() {
-                 $('<p style="color:red !important; margin-left: 30px;" class=error-captcha"><span class="glyphicon glyphicon-remove " ></span> Please enter a message.</p>" ').insertAfter("#message");
-            })
-            
-            function myFunction() {
-                alert("TEST");
-            }
-            
-            window.onload = function() {
-              var recaptcha = document.forms["contact"]["g-recaptcha-response"];
-              var x_name = document.forms["contact"]["name"];
-              var x_email = document.forms["contact"]["email"];
-              var x_message = document.forms["contact"]["message"];
-              x_name.required = true;
-              x_email.required = true;
-              x_message.required = true;
-              recaptcha.required = true;
-              recaptcha.oninvalid = function(e) {
-                error();   
-              }
-              x_name.oninvalid = function(e) {
-                error_name();   
-              } 
-              x_email.oninvalid = function(e) {
-                error_email();   
-              } 
-              x_message.oninvalid = function(e) {
-                error_message();   
-              }
-            }
         });
     </script>
     <style>
     </style>
   </head>
-  <body>
+  <body class="Site">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -128,7 +107,7 @@
       </div><!-- /.container-fluid -->
     </nav>
     <br class="hide-on-small-only">
-    <main class="page-wrap">
+    <main class="Site-content">
     <div class="container">
     <div class="row">
         <div class="col s12 m12 l11 hide-on-small-only">
@@ -168,18 +147,18 @@
                             </div>
                         </div>
                         <div class="card-content black-text center-align">
-                        <span class="card-title"><img src="images/logo.png"></span>
-                        <br><br>
+                        <span class="card-title" style="font-size: 25px">Goldline IT</span>
+                        <br>
                         <p class="flow-text">
-                            243 Whitehorse Road,
+                            243 Whitehorse Road
                             <br>
-                            Balwyn 3103, Victoria
+                            Balwyn 3103
                             <br>
                             www.GoldlineIT.com.au
                             <br>
-                            support@GoldlineIT.com.au
+                            support@goldlineit.com.au
                             <br>
-                            Ph: &nbsp;03 9816 8377
+                            Ph: 03 9816 8377
                             <br>
                             Fax: 03 9816 8344
                             <br><br>
@@ -187,7 +166,7 @@
                             <br>
                             Opening Hours: 9am to 6pm
                             <br>
-                            Weekends: By appointment
+                            Weekends: Open by appointment
                         </p>
                         </div>
                     </div>
@@ -196,54 +175,55 @@
                 </div>
                 </div>
               </div>
-              <form class="col s12 m12 l12 section scrollspy" id="contact" method="POST" action="contact.php" name="contactForm" onsubmit="myFunction()">
+              <form class="col s12 m12 l12 section scrollspy" id="contact" method="POST" action="/contact.php" name="contactForm">
                   <br>
                   <h3 class="black-text" style="margin-left: 30px">Submit a Form</h3>
                   <br><br>
                   <div class="row">
-                    <div class="input-field col s12 m12 l12" id="name_error">
+                    <div class="input-field col s12 m6 l6">
                         <i class="material-icons prefix">account_circle</i>
-                        <input placeholder="John Doe" id="name" type="text" name="name">
-                        <label for="name">Name *</label>
+                        <input placeholder="Justin" id="first_name" type="text" class="validate" name="first_name" required>
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input placeholder="Lee" id="last_name" type="text" class="validate" name="last_name" required>
+                        <label for="last_name">Last Name</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col s12 m6 l6">
                       <i class="material-icons prefix">email</i>
-                      <input placeholder="johndoe@exmaple.com" id="email" type="email" class="validate" name="email">
-                      <label for="email" data-error="wrong" data-succes="right">Email *</label>
+                      <input placeholder="justinlee@exmaple.com" id="email" type="email" class="validate" name="email" required>
+                      <label for="email" data-error="wrong" data-succes="right">Email</label>
                     </div>
                     <div class="input-field col s12 m6 l6">
                       <i class="material-icons prefix">phone</i>
-                      <input placeholder="0411-111-111" id="phone" type="tel" class="validate" name="phone">
+                      <input placeholder="0411-111-111" id="phone" type="tel" class="validate" name="phone" required>
                       <label for="phone">Telephone</label>
                     </div>
                     </div>
                   <div class="row">
                     <div class="input-field col s12 m12 l12">
                       <i class="material-icons prefix">label</i>
-                      <input placeholder="Disaster Recovery" id="subject" type="text" class="validate" name="subject">
+                      <input placeholder="Disaster Recovery" id="subject" type="text" class="validate" name="subject" required>
                       <label for="subject">Subject</label>
                     </div>
                     </div>
                     <div class="row">
                     <div class="input-field col s12">
                       <i class="material-icons prefix">mode_edit</i>
-                      <textarea id="message" class="materialize-textarea" length="250" name="message"></textarea>
-                      <label for="message" style="font-size: 1.5rem;">Message *</label>
+                      <textarea id="message" class="materialize-textarea" length="250" name="message" required></textarea>
+                      <label for="message" style="font-size: 1.5rem;">Message</label>
                     </div>
-                    <div class="input-field col s12 m12 l12">
-                        <div class="g-recaptcha" data-sitekey="6LcDnhwTAAAAAKQTfSwWvbWittScqUChLZvRE7VM" style="margin-left: 30px" id="validate"></div>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="input-field col s12 m12 l12">
-                        <button class="waves-effect waves-light btn orange accent-3 left" type="submit" name="action" style="margin-left: 30px">Submit
+                    <div class="input-field col s12">
+                        <button class="waves-effect waves-light btn orange accent-3 right" type="submit" name="action">Submit
                         <i class="material-icons right">send</i>    
                         </button> 
                     </div>
                     </div>
                 </form>
+              <?=$thankYou ?>
         </div>
         </div>
     </div>
@@ -251,7 +231,7 @@
         <ul class="table-of-contents" data-spy="affix">
             <li class="active"><a href="#Contact" style="color: black;">Contact</a></li>
             <li><a href="#Details" style="color: black;">Contact Details</a></li>
-            <li><a href="#contact" style="color: black;">Submit a Form</a></li>
+            <li><a href="#Form" style="color: black;">Submit a Form</a></li>
         </ul>
     </div>   
     </div>
@@ -279,6 +259,49 @@
               </div>
           </div>
           <div class="panel-body flow-text" style="padding-left: 5px; padding-right: 10px;">
+                <div class="row">
+                <div class="container">
+                <h1 class="black-text center-align hide-on-small-only">Contact Details</h1>
+                <div class="col s12 m10 l8 offset-l2 offset-m1 hide-on-small-only">
+                    <div class="well well-sm">
+                    <div class="scrollspy" id="Details">
+                    <div class="card grey lighten-3 hoverable">
+                        <div class="card-image">
+                            <div class="center-align">
+                                <div class="google-maps">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.065158771983!2d145.0741393158676!3d-37.81194274171332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6413e704c1fe7%3A0x2d59bf2c1e5e334b!2s243+Whitehorse+Rd%2C+Balwyn+VIC+3103!5e0!3m2!1sen!2sau!4v1459667126844" width="500" height="400" frameborder="0" style="border: 0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content black-text center-align">
+                        <span class="card-title" style="font-size: 25px">Goldline IT</span>
+                        <br>
+                        <p class="flow-text">
+                            243 Whitehorse Road
+                            <br>
+                            Balwyn 3103
+                            <br>
+                            www.GoldlineIT.com.au
+                            <br>
+                            support@goldlineit.com.au
+                            <br>
+                            Ph: 03 9816 8377
+                            <br>
+                            Fax: 03 9816 8344
+                            <br><br>
+                            Open From: Monday to Friday
+                            <br>
+                            Opening Hours: 9am to 6pm
+                            <br>
+                            Weekends: Open by appointment
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+              </div>
               <div class="container" style="padding-right: 0px; padding-left: 0px; margin-left: 0px; margin-right: 0px; width: auto">
                 <h3 class="black-text center-align hide-on-med-and-up">Contact Details</h3>
                 <div class="col s12 m10 l8 offset-l2 offset-m1 hide-on-med-and-up" style="padding-left: 5px; padding-right: 0px;">
@@ -289,18 +312,18 @@
                                 </div>
                         </div>
                         <div class="card-content black-text center-align">
-                        <span class="card-title"><img src="images/logo.png"></span>
+                        <span class="card-title" style="font-size: 18px">Goldline IT</span>
                         <br>
                         <p class="flow-text">
-                            243 Whitehorse Road,
+                            243 Whitehorse Road
                             <br>
-                            Balwyn 3103, Victoria
+                            Balwyn 3103
                             <br>
                             www.GoldlineIT.com.au
                             <br>
-                            support@GoldlineIT.com.au
+                            support@goldlineit.com.au
                             <br>
-                            Ph: &nbsp;03 9816 8377
+                            Ph: 03 9816 8377
                             <br>
                             Fax: 03 9816 8344
                             <br><br>
@@ -308,27 +331,17 @@
                             <br>
                             Opening Hours: 9am to 6pm
                             <br>
-                            Weekends: By appointment
+                            Weekends: Open by appointment
                         </p>
                         </div>
                 </div>
                 </div>
               </div>
-<<<<<<< HEAD
-                <form class="col s12 m12 l12 section scrollspy" id="contact" method="POST" action="contact.php" name="contactForm">
-=======
               <form class="col s12 m12 l12 section scrollspy" id="contact" method="POST" action="/contact.php" name="contactForm">
->>>>>>> origin/master
                   <br>
                   <h3 class="black-text" style="margin-left: 30px">Submit a Form</h3>
                   <br><br>
                   <div class="row">
-<<<<<<< HEAD
-                    <div class="input-field col s12 m12 l12">
-                        <i class="material-icons prefix">account_circle</i>
-                        <input placeholder="John Doe" id="name" type="text" class="validate" name="name" required>
-                        <label for="name">Name *</label>
-=======
                     <div class="input-field col s12 m6 l6">
                         <i class="material-icons prefix">account_circle</i>
                         <input placeholder="Justin" id="first_name" type="text" class="validate" name="first_name" required>
@@ -338,38 +351,24 @@
                         <i class="material-icons prefix">account_circle</i>
                         <input placeholder="Lee" id="last_name" type="text" class="validate" name="last_name" required>
                         <label for="last_name">Last Name</label>
->>>>>>> origin/master
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col s12 m6 l6">
                       <i class="material-icons prefix">email</i>
-<<<<<<< HEAD
-                      <input placeholder="johndoe@exmaple.com" id="email" type="email" class="validate" name="email" required>
-                      <label for="email" data-error="wrong" data-succes="right">Email *</label>
-                    </div>
-                    <div class="input-field col s12 m6 l6">
-                      <i class="material-icons prefix">phone</i>
-                      <input placeholder="0411-111-111" id="phone" type="tel" class="validate" name="phone">
-=======
                       <input placeholder="justinlee@exmaple.com" id="email" type="email" class="validate" name="email" required>
                       <label for="email" data-error="wrong" data-succes="right">Email</label>
                     </div>
                     <div class="input-field col s12 m6 l6">
                       <i class="material-icons prefix">phone</i>
                       <input placeholder="0411-111-111" id="phone" type="tel" class="validate" name="phone" required>
->>>>>>> origin/master
                       <label for="phone">Telephone</label>
                     </div>
                     </div>
                   <div class="row">
                     <div class="input-field col s12 m12 l12">
                       <i class="material-icons prefix">label</i>
-<<<<<<< HEAD
-                      <input placeholder="Disaster Recovery" id="subject" type="text" class="validate" name="subject">
-=======
                       <input placeholder="Disaster Recovery" id="subject" type="text" class="validate" name="subject" required>
->>>>>>> origin/master
                       <label for="subject">Subject</label>
                     </div>
                     </div>
@@ -377,22 +376,10 @@
                     <div class="input-field col s12">
                       <i class="material-icons prefix">mode_edit</i>
                       <textarea id="message" class="materialize-textarea" length="250" name="message" required></textarea>
-<<<<<<< HEAD
-                      <label for="message" style="font-size: 1.5rem;">Message *</label>
-                    </div>
-                    <div class="input-field col s12">
-                        <div class="g-recaptcha" data-sitekey="6LcDnhwTAAAAAKQTfSwWvbWittScqUChLZvRE7VM"></div>
-                    </div>
-                    </div>
-                    <div class="row">
-                    <div class="input-field col s12">
-                        <button class="waves-effect waves-light btn orange accent-3 left" type="submit" name="action" style="margin-left: 30px">Submit
-=======
                       <label for="message" style="font-size: 1.5rem;">Message</label>
                     </div>
                     <div class="input-field col s12">
                         <button class="waves-effect waves-light btn orange accent-3 right" type="submit" name="action">Submit
->>>>>>> origin/master
                         <i class="material-icons right">send</i>    
                         </button> 
                     </div>
@@ -403,7 +390,7 @@
     </div>
     </div>
     </main>
-    <footer class="page-footer grey lighten-3 site-footer">
+    <footer class="page-footer grey lighten-3">
           <div class="container">
             <div class="row">
                 <div class="col s12 m4 l4">
@@ -425,6 +412,6 @@
             <div class="container black-text">Copyright © 2016 Goldline IT Pty. Ltd. All rights reserved
             </div>
           </div>
-    </footer>
+        </footer>
     </body>
 </html>
