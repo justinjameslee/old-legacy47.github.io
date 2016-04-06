@@ -8,12 +8,13 @@ Access to this website can be done through legacy47.github.io/goldline or legacy
 This website is currently a major project that i'm am undergoing. 
 As such it is obviously a WIP.
 
+LIVE at http://www.goldlineit.com.au 
+
 #Work in Progress
-* Contacts Page (20%)
-* Other minor pages (0%)
+* Contacts Page (99.95%) ~Multi-Browser Support for Contact Us Form.
 
 #Completed
-* Home Page (DONE) ~Bugs may be present
-* About Page (DONE) ~Bugs may be present
-* Products Page (DONE) ~Bugs may be present
-* Services Page (DONE) ~Bugs may be present
+* Home Page (DONE) 
+* About Page (DONE) 
+* Products Page (DONE)
+* Services Page (DONE)
