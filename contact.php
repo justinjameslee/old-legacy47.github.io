@@ -1,3 +1,86 @@
+<?php
+ 
+// grab recaptcha library
+//require_once "recaptchalib.php";
+
+// your secret key
+//$secret = "6LcDnhwTAAAAALCXJ8oQnge0bEV1K3jRQadsD_aM";
+ 
+// empty response
+//$response = null;
+ 
+// check secret key
+//$reCaptcha = new ReCaptcha($secret);
+
+// if submitted check response
+//if ($_POST["g-recaptcha-response"]) {
+   // $response = $reCaptcha->verifyResponse(
+   //     $_SERVER["REMOTE_ADDR"],
+   //     $_POST["g-recaptcha-response"]
+  //  );
+//}
+ 
+?>
+
+<?php
+ 
+if(isset($_POST['action'])) {
+ 
+ 
+    $email_to = "justinlee9850@gmail.com";
+ 
+    $email_from = $_POST['email']; // required
+ 
+    $message = $_POST['message']; // required
+    
+    $subject = $_POST['subject'];
+ 
+    function clean_string($string) {
+ 
+      $bad = array("content-type","bcc:","to:","cc:","href");
+ 
+      return str_replace($bad,"",$string);
+ 
+    }
+    
+    if (empty($_POST['email']) || empty($_POST['message']) || empty($_POST['subject'])) {
+        echo '<script language="javascript">';
+        echo 'alert("Error, please go back and check you have filled in all the required(*) fields.")';
+        echo '</script>';
+        echo '<script language="javascript">';
+        echo 'window.location = "http://www.legacy47.tk"';
+        echo '</script>';
+    }
+    
+    $email_message = "Legacy47 Contact Form.\n\n";
+    
+    $email_message .= "Form details below.\n\n";
+ 
+    $email_message .= "Email: ".clean_string($email_from)."\n";
+    
+    $email_message .= "Subject: ".clean_string($subject)."\n";
+ 
+    $email_message .= "Message: ".clean_string($message)."\n\n";
+    
+    $email_message .= "From: ".clean_string($email_from)."\n";
+    
+    $headers = 'From: '.$email_from."\r\n".
+        'Reply-To: '.$email_from."\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+    
+    if (empty($_POST['copy'])) {
+        @mail($email_to, $subject, $email_message, $headers); 
+    }
+    
+    else {
+       @mail($email_to, $subject, $email_message, $headers);  
+       @mail($email_from, $subject, $email_message, $headers); 
+    }
+     
+?>
+
+<!--Page to go to once php has been executed-->
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,15 +212,15 @@
    <div class="container" style="width: 45%; margin-top: 5%;">
     <h2 class="section-heading">Need my services?</h2>
        <p class="section-description">I will dedciate myself to your needs accomplishing only your expectations. I will not stop until you. The client is satisfied with the result. If you have an inquire please do not hesitate to contact me through this form below. </p>
-        <form method="POST" action="contact.php">
+        <form>
           <div class="row">
             <div class="six columns">
               <label for="exampleEmailInput">Your email</label>
-              <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput" name="email">
+              <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
             </div>
             <div class="six columns">
               <label for="exampleRecipientInput">Reason for contacting</label>
-              <select class="u-full-width" id="exampleRecipientInput" name="subject">
+              <select class="u-full-width" id="exampleRecipientInput">
                 <option value="Option 1">Question</option>
                 <option value="Option 2">Inquire</option>
                 <option value="Option 3">Support/Help</option>
@@ -145,9 +228,9 @@
             </div>
           </div>
           <label for="exampleMessage">Message</label>
-          <textarea class="u-full-width" placeholder="Hi Justin…" id="exampleMessage" name="message"></textarea>
+          <textarea class="u-full-width" placeholder="Hi Justin…" id="exampleMessage"></textarea>
           <label class="example-send-yourself-copy">
-            <input type="checkbox" name="copy">
+            <input type="checkbox">
             <span class="label-body">Send a copy to yourself</span>
           </label>
           <input class="button-primary" type="submit" value="Submit">
@@ -202,3 +285,8 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
+<?php
+ 
+}
+ 
+?>
